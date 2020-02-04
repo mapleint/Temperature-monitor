@@ -1,3 +1,12 @@
+double G_TMP = 8.5;
+/* temperature */
+bool binswitch;
+/*bin switch, when off shows the dec*/
+char G_TMP_STR[16];
+/* the temperature's string         */
+char G_TMP_STR_DEC[16];
+/* the temperature's string decimal */
+
 /*
  *Char dec to binary changes the values within a char* AND returns it
  *hence the *char type. DON'T USE ON LONGER THINGS LONGER THAN 10 BITS
@@ -29,14 +38,7 @@ void setup() {
 
 void loop() {
 
-double G_TMP = 8.5;
-/* temperature */
-bool binswitch;
-/*bin switch, when off shows the dec*/
-char G_TMP_STR[16];
-/* the temperature's string         */
-char G_TMP_STR_DEC[16];
-/* the temperature's string decimal */
+
 G_TMP = analogRead(A0);
 binswitch = digitalRead(11);
     decToBinary(binswitch ? G_TMP : (int)(G_TMP * 1000) % 1000, binswitch ? G_TMP_STR : G_TMP_STR_DEC);
