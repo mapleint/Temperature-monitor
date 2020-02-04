@@ -11,7 +11,7 @@ char G_TMP_STR_DEC[16];
  *Char dec to binary changes the values within a char* AND returns it
  *hence the *char type. DON'T USE ON LONGER THINGS LONGER THAN 10 BITS
  */
-char* decToBinary(unsigned short n, char *str)
+void decToBinary(unsigned short n, char *str)
 {
         for (int i = 10; i >= 0; i--) {
             int k = n >> i;
@@ -20,7 +20,6 @@ char* decToBinary(unsigned short n, char *str)
             else
                 str[i] = 48;
         }
-        return str;
 }
 /*PrintsChartoPtr, by recursively going. Don't use this on non Chars*/
 void print(char *str)
