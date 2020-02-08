@@ -11,7 +11,7 @@ In future updates:
   
     -Full on, raw no rubber arduino compatability
 
-# This software is lisenced under the GPLV3 liscence
+# This software is lisenced under the GPLV3 license
 
 GNU GENERAL PUBLIC LICENSE
 Version 3, 29 June 2007
