@@ -1,7 +1,7 @@
 double G_TMP;
 /* temperature, read from the anolog */
 double B_TMP;
-/* temperature, but the zero value.
+/* temperature, but the zero value. */
 bool binswitch;
 /*bin switch, when off shows the dec*/
 char G_TMP_STR[16];
