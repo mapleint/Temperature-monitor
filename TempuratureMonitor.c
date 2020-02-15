@@ -16,11 +16,11 @@ char G_TMP_STR_DEC[16];
 void decToBinary(unsigned short n, char *str)
 {
         for (int i = 10; i >= 0; i--) {
-            int k = n >> i;
-            if (k & 1)
-                str[i] = 49;
-            else
-                str[i] = 48;
+                int k = n >> i;
+                if (k & 1)
+                        str[i] = 49;
+                else
+                        str[i] = 48;
         }
 }
 /*PrintsChartoPtr, by recursively going. Don't use this on non Chars*/
@@ -39,18 +39,15 @@ void setup() {
         pinMode(13, OUTPUT);
 }
 
-void loop() {
-        binswitch = digitalRead(11);        
-        if((bool)digitalread(12)){
+void loop() {   
+        if((bool)digitalRead(12)){
                 B_TMP = analogRead(A0);
-        }        
-        if(binswitch)
+        }
+        if((bool)digitalRead)
                 digitalWrite(13, HIGH);   
         else
                 digitalWrite(13, LOW);
         G_TMP = (double)analogRead(A0) - (double)B_TMP;
-        
-        decToBinary(binswitch ? G_TMP : (int)(G_TMP * 1000) % 1000,
-                    binswitch ? G_TMP_STR : G_TMP_STR_DEC);
+        decToBinary(binswitch ? G_TMP : (int)(G_TMP * 1000) % 1000, binswitch ? G_TMP_STR : G_TMP_STR_DEC);
         print(binswitch ? G_TMP_STR : G_TMP_STR_DEC);
 }
