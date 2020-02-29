@@ -7,7 +7,7 @@ void setup() {
 }
 double VoltToCelcius(double val) // phat function telling vals
 {
-        return -1481.98+sqrt(2196200+(1.8639-x)/(0.00000388));
+        return -1481.98+sqrt(2196200+(1.8639-val)/(0.00000388));
 }
 
 void loop() {   
