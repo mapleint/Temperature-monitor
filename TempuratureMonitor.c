@@ -1,15 +1,14 @@
-double G_TMP; //declare global temp
-void setup(){e
+void setup(){
         Serial.begin(9600);
         for(int a = 11; a <=13; a++)
                 pinMode(a, OUTPUT);
 }
-double MVoltToCelcius(double val) // phat function telling vals
+double VoltToCelcius(double val) // phat function telling vals
 {
         return -1481.98+sqrt(2196200+(1.8639-val)/(0.00000388));
 }
 void loop() {   
-        G_TMP = VoltToCelcius((5.0*analogRead(A0))/1023.0); // set 
+        double G_TMP = VoltToCelcius((5.0*analogRead(A0))/1023.0); // set 
         digitalWrite(11, LOW);  
         digitalWrite(12, LOW);
         digitalWrite(13, LOW);
@@ -25,5 +24,5 @@ void loop() {
         Serial.print(", F ");
         Serial.print(G_TMP*1.8 + 32); //print freedom units
         Serial.print("\n");
-        delay(350);
+        delay(350); // to delay spam
 }
