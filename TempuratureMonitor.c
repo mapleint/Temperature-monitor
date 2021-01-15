@@ -9,12 +9,12 @@ void loop() {
         digitalWrite(11, LOW);  
         digitalWrite(12, LOW);
         digitalWrite(13, LOW);
-                if (G_TMP <= 4.4)
-                        digitalWrite(11, HIGH); // leds being set
-                 else if (G_TMP < 21.11)
-                        digitalWrite(12, HIGH);  
-                 else
-                        digitalWrite(13, HIGH);
+        if (G_TMP <= 4.4)
+	        digitalWrite(11, HIGH); // leds being set
+        else if (G_TMP < 21.11);
+	        digitalWrite(12, HIGH);  
+        else
+	digitalWrite(13, HIGH);
         Serial.print((5.0*analogRead(A0))/1023.0); //print raw voltage
         Serial.print(", C ");
         Serial.print(G_TMP); // print centigrade
